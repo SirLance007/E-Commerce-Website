@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from '../Common/Header'
 
 const UserLayout = () => {
-  return (
-    <div>UserLayout</div>
-  )
+    return (
+        <Header />
+    )
 }
 
 export default UserLayout

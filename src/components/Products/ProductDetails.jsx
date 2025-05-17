@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { toast } from 'sonner';
+import ProductGrid from './ProductGrid';
 
 const ProductDetails = () => {
     const [mainImage , setmainImage] = useState("");
@@ -54,8 +55,47 @@ const handleAddToCart = () => {
             { url: 'https://picsum.photos/400/500?random=3', alt: 'Stylish Jacket' },
         ],
     }
+
+    const similarProducts = [
+        {
+            id : 1,
+            name : 'Casual Shirt',
+            price : 750,
+            image : {
+                url : "https://picsum.photos/400/500?random=1",
+                alt : "Casual Shirt"
+            }
+        },
+        {
+            id : 2,
+            name : 'Casual Jacket',
+            price : 650,
+            image : {
+                url : "https://picsum.photos/400/500?random=2",
+                alt : "Casual Jacket"
+            }
+        },
+        {
+            id : 3,
+            name : 'Pink Shirt',
+            price : 250,
+            image : {
+                url : "https://picsum.photos/400/500?random=3",
+                alt : "Casual Shirt"
+            }
+        },
+        {
+            id : 4,
+            name : 'White Shirt',
+            price : 350,
+            image : {
+                url : "https://picsum.photos/400/500?random=4",
+                alt : "Casual Shirt"
+            }
+        },
+    ]
     return (
-        <div className='p-6'>
+        <div className=' sm:p-4 md:p-6 lg:pd-2'>
             <div className='max-w-6xl mx-auto bg-white p-8 rounded-lg'>
                 <div className='flex flex-col md:flex-row '>
                     {/* Left Thumbnails */}
@@ -167,6 +207,12 @@ const handleAddToCart = () => {
                             </table>
                         </div>
                     </div>
+                </div>
+                <div className='mt-20'>
+                        <h2 className='text-2xl text-center font-medium mb-4'>
+                            You may also like 
+                        </h2>
+                        <ProductGrid products = {similarProducts}/>
                 </div>
             </div>
         </div>

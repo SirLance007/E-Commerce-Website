@@ -12,7 +12,7 @@ const Hero = () => {
                         Vacation
                     </h1>
                     <p className='text-sm tracking-tighter md:text-lg mb-6 '>
-                        Explore our vacation outfits with our fast worldd wide shipping
+                        Explore our vacation outfits with our fast world wide shipping
                     </p>
                     <Link to = "#" className = "bg-white text-gray-950 px-6 py-2 rounded-md text-lg "> Shop Now </Link>
                 </div>
